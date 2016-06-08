@@ -14,9 +14,7 @@ RUN wget -qO statsd.tar.gz \
 RUN cd statsd && \
     npm install statsd-librato-backend
 
-COPY config.js /opt/statsd/default-config.js
-
-VOLUME ["/opt/statsd/config.js"]
+COPY config.js /opt/statsd/config.js
 
 EXPOSE 8125/udp
 
